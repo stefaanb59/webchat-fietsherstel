@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Fietsherstelbot</title>
-  </head>
-  <body>
-    <h1>Welkom bij de Fietsherstel chatbot</h1>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fietsherstelbot</title>
+</head>
+<body>
+  <h1>Welkom bij de Fietsherstel chatbot</h1>
 
-    <script
-      src="https://cdn.jsdelivr.net/gh/mrbot-ai/rasa-webchat@1.0.1/lib/index.js"
-      type="text/javascript">
-    </script>
+  <div id="webchat"></div>
 
-    <script type="text/javascript">
-      WebChat.default.init({
-        selector: "body",
-        initPayload: "/greet",
-        customData: {"language": "nl"},
-        socketUrl: "https://fietsherstelbot.onrender.com", // Pas deze URL aan indien nodig
-        title: "Fietsherstelhulp",
-        subtitle: "Stel je vraag!"
-      });
-    </script>
-  </body>
+  <!-- ✅ Werkende scriptlink naar JavaScript-bestand -->
+  <script src="https://cdn.jsdelivr.net/npm/@botfront/rasa-webchat@1.0.1/lib/index.min.js"></script>
+
+  <!-- Configuratie van de chat -->
+  <script defer>
+    WebChat.default.init({
+      selector: "#webchat",
+      initPayload: "/greet",
+      customData: { language: "nl" },
+      socketUrl: "https://fietsherstelbot.onrender.com",
+      title: "Fietsherstelhulp",
+      subtitle: "Stel je vraag!"
+    });
+  </script>
+</body>
 </html>
+

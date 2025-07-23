@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fietsherstelbot Chat (REST API)</title>
+  <script src="https://unpkg.com/@botfront/rasa-webchat@1.0.1/lib/index.min.js"></script>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+  </style>
+</head>
+<body>
+
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/start",
+    restApi: "https://fietsherstelbot.onrender.com/webhooks/rest/webhook",
+    title: "Fietsherstelbot",
+    subtitle: "Chat met je fietsherstel assistent"
+  });
+</script>
+
+<div id="webchat"></div>
+
+</body>
+</html>
